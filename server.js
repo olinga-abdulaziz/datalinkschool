@@ -5,7 +5,6 @@ const path=require('path')
 const bodyparser=require('body-parser')
 const dbconnection=require('./config/db')
 const routers=require('./routes/routes')
-const mpesa=require('./routes/mpesa')
 const memberRouter=require('./routes/memberRouter')
 const accountRouter=require('./routes/AccountRouter')
 const { engine }=require('express-handlebars')
@@ -41,7 +40,6 @@ app.use(bodyparser.json())
 app.use('/' , routers)
 app.use('/member',memberRouter)
 app.use('/account',accountRouter)
-app.use('/mpesa',mpesa)
 
 
 
